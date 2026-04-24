@@ -15,10 +15,10 @@ graph LR
     LB[Load Balancer<br/>Nginx]
     API[ApiServer]
     WSS[WebSocket Server]
-    PubSub[(Pub/Sub Redis)]
-    Cache[(Cache Redis)]
-    DB[(Database Psql)]
-    FakeDr[fakeDriverServer]
+    PubSub[(Pub/Sub)]
+    Cache[(Cache)]
+    DB[(Database)]
+    FakeDr[Fake Driver Server]
     GMap{Google Map API}
 
     %% 接入層
