@@ -26,8 +26,8 @@ graph LR
     LB --- API
 
     %% 核心資料雙向流 (Cache-Aside 邏輯)
-    API <-->|"1. Read <br>(not found read database)"| Cache
-    API <-->|2 Read/Write| DB
+    API <-->|" Read <br>(not found read database)"| Cache
+    API <-->|Read/Write| DB
     
     %% 強調 DB 到 Cache 的路徑
     DB -->|write| Cache 
