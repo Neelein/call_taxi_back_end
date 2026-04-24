@@ -1,0 +1,6 @@
+*.env
+*.yml
+dockerfile
+go.sum
+makefile
+.dockerignore
