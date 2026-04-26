@@ -90,7 +90,7 @@ sequenceDiagram
 ![Select destination Location](./image/5.png)
 ![Select destination Location](./image/6.png)
 
-### 3. 「Call Taxi」ボタンをクリックする。
+### 3. 「タクシーを呼ぶ」ボタンをクリックする。
 ![Select destination Location](./image/7.png)
 
 ### 4. ドライバーのステータスは「pick up」と表示される。
@@ -111,6 +111,6 @@ sequenceDiagram
 
 ## Notice 
 
-### 1.セッションキーはCookieに1時間保存される。1時間何も操作しない場合、Cookieは消える。「Call Taxi」ボタンをクリックすると、「Server busy」というアラートが表示される。ページを更新してください。
+### 1.セッションキーはCookieに1時間保存される。1時間何も操作しない場合、Cookieは消える。「タクシーを呼ぶ」ボタンをクリックすると、「Server busy」というアラートが表示される。ページを更新してください。
 ### 2.「Unfollow Driver」をクリックすると、地図はドライバーの追跡を解除するが、ルートは表示され続ける。
 
