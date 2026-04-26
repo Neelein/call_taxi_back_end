@@ -1,12 +1,12 @@
 # Call Taxi プロジェクト
 [English](README.md) | [日本語](ja_README.md)
 
-## Feature
+## 機能
 - ドライバーの位置を追跡する
 - 到着予想時間と距離を表示する
 - ドライバーの走行経路を表示する
 
-## Flowchart
+## フローチャート
 ``` mermaid
 graph TD
     Cli(Cleint)
@@ -30,7 +30,7 @@ graph TD
     Api -- Send driver position--> Messagep -->Ws --> Cli
 ```
 
-## Sequence Diagram
+## シーケンス図
 
 ```mermaid
 sequenceDiagram
@@ -79,7 +79,7 @@ sequenceDiagram
     end
 ``` 
 
-## Instructions
+## 説明
 
 ### 1. 出発地点を選択する。
 ![Select Departure Location](./image/1.png)
@@ -109,7 +109,7 @@ sequenceDiagram
 ![Select destination Location](./image/11.png)
 
 
-## Notice 
+## 注意事項 
 
 ### 1.セッションキーはCookieに1時間保存される。1時間何も操作しない場合、Cookieは消える。「タクシーを呼ぶ」ボタンをクリックすると、「Server busy」というアラートが表示される。ページを更新してください。
 ### 2.「フォローを解除する」をクリックすると、地図はドライバーの追跡を解除するが、ルートは表示され続ける。
