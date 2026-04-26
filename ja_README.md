@@ -105,7 +105,7 @@ sequenceDiagram
 ### 7. ドライバーが目的地に到着すると、注文ステータスは「complete」になる。
 ![Select destination Location](./image/2.png)
 
-### 8. 「Cancel」ボタンをクリックすると、注文ステータスは「cancel」になる。
+### 8. 「取り消す」ボタンをクリックすると、注文ステータスは「cancel」になる。
 ![Select destination Location](./image/11.png)
 
 
