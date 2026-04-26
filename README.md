@@ -1,4 +1,5 @@
 # Welcome to Call Taxi Project
+[English](README.md) | [日本語](ja_README.md)
 
 ## Feature
 - Track the driver’s location
@@ -103,10 +104,7 @@ sequenceDiagram
 ### 7.When the driver arrives at the destination location, the order status will be "complete".
 ![Select destination Location](./image/2.png)
 
-### 8.When the driver arrives at the destination location, the order status will be "complete".
-![Select destination Location](./image/2.png)
-
-### 9.Click cancel button,the order status will be "cancel".
+### 8.Click cancel button,the order status will be "cancel".
 ![Select destination Location](./image/11.png)
 
 ### Notice 

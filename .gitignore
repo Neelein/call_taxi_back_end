@@ -4,3 +4,4 @@ dockerfile
 go.sum
 makefile
 .dockerignore
+.DS_Store
