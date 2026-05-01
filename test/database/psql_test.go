@@ -157,3 +157,19 @@ func TestPsqlGetLatestOrder(t *testing.T) {
 	}
 	t.Log(cus)
 }
+
+func TestPsqlBindingDriver(t *testing.T) {
+	godotenv.Load("../../dotenv.env")
+	database.CreatePsqlServerClient()
+	driver := &types.Driver{
+		ID:     7,
+		Name:   "Binson",
+		Route:  1,
+		Status: database.BUSY_DRIVER,
+	}
+
+	err := database.PsqlDB.BindingDriver(driver)
+	if err != nil {
+		t.Fatalf("get session fail: %s", err)
+	}
+}

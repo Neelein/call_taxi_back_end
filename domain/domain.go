@@ -41,7 +41,7 @@ func BindingDriver(cus *types.Customer) (*dataBaseType.Order, error) {
 	}
 
 	driverData.Status = database.BUSY_DRIVER
-	err = database.PsqlDB.UpdateDriver(driverData)
+	err = database.PsqlDB.BindingDriver(driverData)
 
 	if err != nil {
 		return nil, err

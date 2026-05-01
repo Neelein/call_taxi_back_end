@@ -214,3 +214,20 @@ func (p Psql) GetLatestOrder(cusId int) (*types.Order, error) {
 	}
 	return &order, nil
 }
+
+func (p Psql) BindingDriver(driver *types.Driver) error {
+	driverData := &types.Driver{}
+	err := PsqlDB.db.Model(driverData).Where("id = ? AND  status = ?", driver.ID, AVAILABLE_DRIVER).Select()
+
+	if err == pg.ErrNoRows {
+		return errors.New("no data exist")
+	}
+
+	_, err = PsqlDB.db.Model(driver).Where("id = ? AND  status = ?", driver.ID, AVAILABLE_DRIVER).Update()
+	if err != nil {
+		utils.PrintError(UPDATE_DATA_FAIL, err)
+		return err
+	}
+
+	return nil
+}
