@@ -19,20 +19,16 @@ import (
 )
 
 func BindingDriver(cus *types.Customer) (*dataBaseType.Order, error) {
-	uuid := uuid.New()
-	mutex := database.Rdb.CreateLock(uuid.String())
 	driver, err := database.Rdb.GetNearDriver(cus.Departure_Lat, cus.Departure_Lng)
 	if err != nil {
 		return nil, errors.New(database.NEAR_DRIVER_NOT_FOUND)
 	}
 
 	// only the one customer can change driver status and create order
-	err = mutex.Lock()
 	if err != nil {
 		utils.PrintError(database.GET_LOCK_FAIL, err)
 		return nil, err
 	}
-	defer mutex.Unlock()
 
 	driverData, err := database.PsqlDB.GetDriver(driver.Id)
 
